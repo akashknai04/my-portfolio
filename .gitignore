@@ -1,0 +1,17 @@
+# Dependencies & Cache
+__pycache__/
+*.py[cod]
+.env
+.venv/
+env/
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Playwright & test output
+.playwright-mcp/
+tmp*/
+*.log
