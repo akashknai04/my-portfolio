@@ -15,3 +15,4 @@ Interactive portfolio showcasing AI/ML architectures, agent workflows (LangGraph
 
 - **Frontend**: HTML5, Canvas API, CSS3, JavaScript (ES6+), Three.js
 - **AI/ML Focus**: LLMs, LangGraph, CrewAI, LlamaIndex, PyTorch, Hugging Face, PEFT / LoRA, Vision-Language Models, Edge AI (NVIDIA Jetson)
+
