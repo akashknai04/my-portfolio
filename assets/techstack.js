@@ -21,23 +21,23 @@ scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnviron
 const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
 camera.position.set(0, 0, 14);
 
-scene.add(new THREE.HemisphereLight(0xffffff, 0x220308, 0.7));
+scene.add(new THREE.HemisphereLight(0xffffff, 0x0B1020, 0.7));
 const key = new THREE.DirectionalLight(0xffffff, 1.8); key.position.set(4, 6, 8); scene.add(key);
-const rim = new THREE.PointLight(0xc8102e, 40, 30, 1.5); rim.position.set(-6, -3, 4); scene.add(rim);
-const rim2 = new THREE.PointLight(0xff5a6e, 18, 30, 1.5); rim2.position.set(7, 4, 3); scene.add(rim2);
+const rim = new THREE.PointLight(0x6366f1, 40, 30, 1.5); rim.position.set(-6, -3, 4); scene.add(rim);
+const rim2 = new THREE.PointLight(0x22d3ee, 18, 30, 1.5); rim2.position.set(7, 4, 3); scene.add(rim2);
 
 /* label texture: name printed twice around the ball */
 function labelTex(name, dark) {
   const c = document.createElement('canvas'); c.width = 1024; c.height = 512;
   const g = c.getContext('2d');
-  g.fillStyle = dark ? '#6e0a19' : '#f3f3f5'; g.fillRect(0, 0, 1024, 512);
+  g.fillStyle = dark ? '#111a36' : '#e6eaf5'; g.fillRect(0, 0, 1024, 512);
   const fs = Math.max(48, Math.min(110, 720 / Math.max(3, name.length)));
   g.font = `700 ${fs}px "Space Grotesk", Arial, sans-serif`;
   g.textAlign = 'center'; g.textBaseline = 'middle';
-  g.fillStyle = dark ? '#ffffff' : '#8e1022';
+  g.fillStyle = dark ? '#ffffff' : '#4338ca';
   g.fillText(name, 256, 256); g.fillText(name, 768, 256);
   // small accent band
-  g.fillStyle = dark ? 'rgba(255,255,255,.18)' : 'rgba(142,16,34,.12)';
+  g.fillStyle = dark ? 'rgba(34,211,238,.35)' : 'rgba(99,102,241,.25)';
   g.fillRect(0, 330, 1024, 10);
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
   return t;
